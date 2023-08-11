@@ -1,27 +1,17 @@
+import { Buttons } from './FeedbackOptions.styled';
 export const FeedbackOptions = ({ options, feedback }) => {
   return (
-    <>
-      <button
-        onClick={() => {
-          feedback('good');
-        }}
-      >
-        Good
-      </button>
-      <button
-        onClick={() => {
-          feedback('neutral');
-        }}
-      >
-        Neutral
-      </button>
-      <button
-        onClick={() => {
-          feedback('bad');
-        }}
-      >
-        Bad
-      </button>
-    </>
+    <Buttons>
+      {options.map(option => (
+        <button
+          key={option}
+          onClick={() => {
+            feedback(option);
+          }}
+        >
+          {option}
+        </button>
+      ))}
+    </Buttons>
   );
 };

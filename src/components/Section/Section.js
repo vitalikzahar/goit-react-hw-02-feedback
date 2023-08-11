@@ -1,9 +1,9 @@
-// import { Statistics } from 'components/Statistics/Statistics';
+import { AllFeedback } from './Section.styled';
 export const Section = ({ title, children }) => {
   return (
-    <div>
+    <AllFeedback>
       <h2>{title}</h2>
       <div>{children}</div>
-    </div>
+    </AllFeedback>
   );
 };
