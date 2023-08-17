@@ -46,7 +46,9 @@ export class App extends Component {
         <Section title={'Statistics'}>
           {' '}
           {total === 0 ? (
-            <Notificatoin />
+            <Notificatoin
+              title={'Notification message="There is no feedback'}
+            />
           ) : (
             <Statistics
               good={optionsFeedback.good}
